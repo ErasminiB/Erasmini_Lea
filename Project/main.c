@@ -11,6 +11,10 @@
 #include "spi_comm.h"
 #include "sensors/proximity.h"
 #include "motors.h"
+#include "selector.h"
+#include "epuck1x/uart/e_uart_char.h"
+#include "serial_comm.h"
+
 
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
@@ -33,12 +37,51 @@ int main(void)
     clear_leds();
     spi_comm_start();
 
+    //set_body_led(2);
+    //chThdSleepMilliseconds(1000);
+
     //Motors
     motors_init();
+    get_selector();
+    int blink_count = 0;
+
 
     /* Infinite loop. */
     while (1)
     {
+    	serial_start();
+    	e_send_uart1_char(const char * buff, int buff_len);
+
+    	char str[100];
+    	int str_length;
+    	str_length = sprintf(str, "Hello World\n");
+    	e_send_uart1_char(str, str_length);
+
+    	/*
+    	if (blink_count <= 2*get_selector()){
+			left_motor_set_speed(500);
+			right_motor_set_speed(-500);
+			chThdSleepMilliseconds(1000);
+			set_body_led(2);
+			blink_count+=1;
+    	}
+
+    	else if (blink_count >= 2*get_selector() && blink_count <= 4*get_selector()){
+			left_motor_set_speed(-500);
+			right_motor_set_speed(500);
+			chThdSleepMilliseconds(1000);
+			set_body_led(2);
+			blink_count+=1;
+    	}
+
+    	else{
+    		blink_count=0;
+    	}
+
+*/
+
+
+
     	if (get_calibrated_prox(0)>=200 || get_calibrated_prox(7)>=200)
     	{
     		set_front_led(2);
@@ -47,11 +90,12 @@ int main(void)
     	}
     	else
     	{
-    		left_motor_set_speed(500);
+    		left_motor_set_speed(-500);
     		right_motor_set_speed(500);
     	}
     }
 }
+
 
 #define STACK_CHK_GUARD 0xe2dee396
 uintptr_t __stack_chk_guard = STACK_CHK_GUARD;

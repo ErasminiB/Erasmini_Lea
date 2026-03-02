@@ -140,7 +140,8 @@ build/obj/main.o: main.c \
  ../e-puck2_main-processor/src/leds.h \
  ../e-puck2_main-processor/src/spi_comm.h \
  ../e-puck2_main-processor/src/sensors/proximity.h \
- ../e-puck2_main-processor/src/motors.h
+ ../e-puck2_main-processor/src/motors.h \
+ ../e-puck2_main-processor/src/selector.h
 
 /home/acse-lab/Documents/Erasmini_Lea/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h:
 
@@ -427,3 +428,5 @@ main.h:
 ../e-puck2_main-processor/src/sensors/proximity.h:
 
 ../e-puck2_main-processor/src/motors.h:
+
+../e-puck2_main-processor/src/selector.h:

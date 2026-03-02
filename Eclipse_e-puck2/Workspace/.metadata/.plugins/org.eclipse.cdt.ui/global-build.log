@@ -543,3 +543,302 @@ make all
 14:43:13 **** Incremental Build of configuration Default for project Project ****
 make all 
 make: Nothing to be done for 'all'.
+15:23:43 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c:65:32: error: expected ';', ',' or ')' before numeric constant
+ void set_body_led(unsigned int 2);
+                                ^
+In file included from ../e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:80:0,
+                 from main.c:6:
+../e-puck2_main-processor/ChibiOS//os/rt/include/chvt.h:121:3: error: expected declaration specifiers or '...' before '(' token
+   ((systime_t)(((((uint32_t)(msec)) *                                       \
+   ^
+../e-puck2_main-processor/ChibiOS//os/rt/include/chthreads.h:108:49: note: in expansion of macro 'MS2ST'
+ #define chThdSleepMilliseconds(msec) chThdSleep(MS2ST(msec))
+                                                 ^~~~~
+main.c:66:1: note: in expansion of macro 'chThdSleepMilliseconds'
+ chThdSleepMilliseconds(1000);
+ ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:24:54 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:36:36: error: expected ';', ',' or ')' before numeric constant
+     void set_body_led(unsigned int 2);
+                                    ^
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:25:21 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:36:23: error: expected declaration specifiers or '...' before numeric constant
+     void set_body_led(2);
+                       ^
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:26:11 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:36:36: error: expected ';', ',' or ')' before '2'
+     void set_body_led(unsigned int '2');
+                                    ^~~
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:30:15 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:36:18: error: expected expression before 'unsigned'
+     set_body_led(unsigned int '2');
+                  ^~~~~~~~
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:30:52 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62324	   3068	  16868	  82260	  14154	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:33:46 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62324	   3068	  16868	  82260	  14154	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:34:12 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:42:04 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     get_selector(4);
+     ^~~~~~~~~~~~
+     pselect
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62404	   3068	  16868	  82340	  141a4	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:45:31 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: error: 'a' undeclared (first use in this function)
+     a=get_selector();
+     ^
+main.c:41:5: note: each undeclared identifier is reported only once for each function it appears in
+main.c:41:7: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     a=get_selector();
+       ^~~~~~~~~~~~
+       pselect
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:46:13 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:11: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     int a=get_selector();
+           ^~~~~~~~~~~~
+           pselect
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62244	   3068	  16868	  82180	  14104	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:49:13 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     get_selector();
+     ^~~~~~~~~~~~
+     pselect
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62324	   3068	  16868	  82260	  14154	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:49:26 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:52:37 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+     int get_selector();
+     ^~~
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62308	   3068	  16868	  82244	  14144	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:53:03 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:53:22 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62308	   3068	  16868	  82244	  14144	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:53:32 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     get_selector();
+     ^~~~~~~~~~~~
+     pselect
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62324	   3068	  16868	  82260	  14154	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+15:54:10 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:54:40 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:57:32 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:41:5: warning: implicit declaration of function 'get_selector'; did you mean 'pselect'? [-Wimplicit-function-declaration]
+     get_selector();
+     ^~~~~~~~~~~~
+     pselect
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62404	   3068	  16868	  82340	  141a4	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+16:00:41 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62324	   3068	  16868	  82260	  14154	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+16:20:25 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:48:25: error: invalid operands to binary * (have 'int' and 'int (*)(void)')
+      if (blink_count < 2*get_selector){
+                         ^
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:21:09 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62244	   3068	  16868	  82180	  14104	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+16:23:05 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62244	   3068	  16868	  82180	  14104	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+16:28:59 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c:85:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:217: build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:29:20 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  62260	   3068	  16868	  82196	  14114	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
